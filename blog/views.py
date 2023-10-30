@@ -7,7 +7,7 @@ def blog_index(request):
         posts = Post.objects.all().order_by("-created_on")
         # the minus sign in created-on is to list objects in and ascending order
         context = {
-                "posts" = posts,
+                "posts": posts,
                 }
         return render(request, "blog/index.html", context)
 
